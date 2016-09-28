@@ -1,0 +1,5 @@
+#action service
+sudo service nginx start|reload...
+
+#Changer page web
+/usr/share/nginx/www

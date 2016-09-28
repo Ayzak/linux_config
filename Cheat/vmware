@@ -1,0 +1,5 @@
+#Show vmware products install 
+sudo vmware-installer -l
+
+#uninstall vmware product
+sudo vmware-installer -u PRODUCT-NAME

@@ -1,0 +1,2 @@
+#Permet de faire un make en multithread, N étant le nombre de thread.
+make -j N

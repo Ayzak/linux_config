@@ -1,0 +1,15 @@
+#ajouter un utilisateur
+root@~home:~#useradd -m -d /home/toto/ -s /bin/bash toto
+
+#-m Pour la creation du répertoire de home
+#-d Pour indiquer le chemin du repertoire de home
+#-s Pour indiquer le shell que l'on souhaite utiliser
+
+#Créer un mot de passe pour cet utilisateur:
+root@~home:~# passwd toto
+#Enter new UNIX password:
+#Retype new UNIX password:
+#passwd: password updated successfully
+
+#gestion des groupes
+https://wiki.archlinux.fr/Utilisateurs_et_Groupes

@@ -1,0 +1,2 @@
+# Generate all possibilities => dictionary
+crunch "min int length" "max int length" "caracters ...." -o /path/tmp/name.txt

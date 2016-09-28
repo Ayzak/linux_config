@@ -1,0 +1,8 @@
+# activate monitoring for a futur dump/spoof with interface : wlan0, eth0 etc...
+sudo airmon-ng start interface
+
+# dump network activity with monitoring name.
+sudo airodump-ng mon0
+
+#stop listening interface.
+sudo airmon-ng stop mon0

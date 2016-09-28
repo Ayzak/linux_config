@@ -1,0 +1,3 @@
+#Communication envers des périphériques genre arduino. ACM variables.
+#Utiliser dmesg pour trouver le bon ACM.
+minicom -D /dev/ttyACM3 -b 9600

@@ -1,0 +1,18 @@
+src:http://www.arobase.org/ecole/vrfy.htm
+
+#VRFY : le serveur mail dira s’il connait l’adresse ou non. Beaucoup de serveurs ne jouent pas franc-jeu et ne dévoilent pas vraiment si c’est le cas.
+# Il faut alors faire un VRFY « bidon » pour vérifier si c’est le cas.
+
+
+#EXPN (pour expand) permet aussi de lister les personnes d’une liste ou les alias d’une adresse.
+
+#exemple via smtp (port 25)
+
+#connexion au serveur SMTP
+$ telnet 192.168.10.129 25
+#Dire bonjour au serveur
+$ ehlo localhost
+#vérifier l'éxixstance de quelqu'un
+VRFY jenexistepas
+VRFY root
+

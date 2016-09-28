@@ -1,0 +1,2 @@
+#Outpout all install packets.
+dpkg --get-selections

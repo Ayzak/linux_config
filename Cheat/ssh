@@ -1,0 +1,37 @@
+#Connect SSH 
+ssh user@192.168.xx.xx
+
+#Quand il y a conflit SSH suite à une nouvelle connexion (nouveau OS) sur même IP
+#Offending ECDSA key in /home/jeremy/.ssh/known_hosts:3
+#remove with:
+ssh-keygen -f /home/jeremy/.ssh/known_hosts -R 192.168.xx.xx(IP)
+
+# To ssh via pem file (which normally needs 0600 permissions):
+ssh -i /path/to/file.pem user@example.com
+
+#Generate key
+ssh-keygen -t dsa
+
+#allow ssh couple of key to target.
+ssh-copy-id -i ~/.ssh/id_dsa.pub login@nom_DNS_du_serveur
+
+# To connect on an non-standard port:
+ssh -p 2222 user@example.com
+
+# To execute a command on a remote server:
+ssh -t user@example.com 'the-remote-command'
+
+# To tunnel an x session over SSH:
+ssh -X user@example.com
+
+# To launch a specific x application over SSH:
+ssh -X -t user@example.com 'chromium-browser'
+
+# To create a SOCKS proxy on localhost and port 9999
+ssh -D 9999 user@example.com
+
+# -X use an xsession, -C compress data, "-c blowfish" use the encryption blowfish
+ssh user@example.com -C -c blowfish -X
+
+# For more information, see:
+# http://unix.stackexchange.com/q/12755/44856

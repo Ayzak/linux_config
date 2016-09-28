@@ -1,0 +1,24 @@
+# [ + ] – Services with this sign will start at OS boot.
+# [ - ] – Services with this sign do not start at OS boot.
+service --status-all
+
+# Obtenir le status d'un service 
+service apache2 status
+
+# Démarrer un service.
+service apache2 start
+
+# Arrêter un service.
+service apache2 stop
+
+# Redémarrer un service.
+service apache2 restart
+
+# Ne démarre pas automatiquement..
+update-rc.d -f  apache2 remove
+
+# Ddémarre automatiquement au démarrage.
+update-rc.d apache2 defaults
+
+# ajouter des scripts personnalisés
+http://www.leeroy.me/utilisation-de-update-rcd-sous-debian-ou-comment-lancer-des-scripts-au-demarrage-du-systeme/

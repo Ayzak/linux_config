@@ -1,0 +1,15 @@
+###
+# Install with git.
+###
+
+#First, install the dependencies:
+[sudo] pip install docopt pygments appdirs
+
+#Then clone this repository:
+git clone git@github.com:chrisallenlane/cheat.git
+
+#Or git pull on git/cheat local repertory.
+git pull
+
+#Lastly, cd into the cloned directory, then run:
+[sudo] python setup.py install
