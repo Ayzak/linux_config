@@ -1,0 +1,140 @@
+# conky
+#
+# http://crunchbanglinux-fr.org/wiki/crunchbang:conky
+#
+# Enjoy! :)
+##############################################
+# Paramètres
+##############################################
+
+#pour que conky tourne en arrière plan background no pour les tests
+background yes
+
+#xft = issage de la police etc...
+use_xft yes
+#Police
+xftfont Liberation Sans:size=9
+#Transparence de la police.
+xftalpha 1
+override_utf8_locale yes
+
+#Taux de rafraichissement de la fenêtre en secondes.
+update_interval 1.0
+total_run_times 0
+
+#Utiliser sa propre fenêtre.
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+#own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+#Réglage de la mémoire pour éviter le clignotement.
+double_buffer yes
+minimum_size 200 200
+maximum_width 200
+
+#Afficher les ombres
+draw_shades yes
+
+#Afficher les contours
+draw_outline no
+
+#Afficher autour des blocs de texte.
+draw_borders no
+draw_graph_borders no
+
+#couleurs.
+default_color 3AFFFD
+#color1 FF3A3A # rouge                                              ##--|
+#color2 FFC13A # orange                                             ##  |
+#color3 68FF3A # vert                                               ##  |--couleurs additionnelles
+#color4 3AFFFD # bleu ciel                                          ##  |
+#color5 443AFF # bleu marine
+default_shade_color 000000
+default_outline_color 828282
+
+#Alignement + position par rapport au bord.
+alignment top_right
+gap_x 12
+gap_y 56
+
+#Soustraire les mémoires tampons de la mémoire utilisé + éviter la troncature.
+no_buffers yes
+text_buffer_size 2048
+
+#Minuscules.
+uppercase no
+
+#Nombre d'échantillons à utiliser pour calculer la moyenne d'utilisation.
+cpu_avg_samples 2
+
+
+
+
+#Tentative de charge d'un script lua.
+#lua_load /home/jeremy/bin/horloge.lua
+
+
+
+
+##############################################
+#  Affichage
+##############################################
+
+TEXT
+S Y S T È M E
+${hr}
+Hôte:$alignr$nodename
+Activité:$alignr$uptime
+RAM:$alignr$mem/$memmax
+Swap:$alignr$swap/$swapmax
+DD:$alignr${fs_used /}/${fs_size /}
+CPU:$alignr${cpu cpu0}%
+
+R A C C O U R C I S
+${hr}
+Alt+F2$alignr Execute
+Super+X$alignr Terminal
+Super+T$alignr Terminator
+Super+F$alignr Home Folder
+Super+M$alignr VLC
+Ctrl+Alt+L$alignr Verrouiller
+Ctrl+Alt+left$alignr Switch Desktop
+Shift+Ctrl+Alt$alignr Switch Desktop Appli
+Alt+R$alignr réduire
+${hr}
+Shift+Ctrl+j$alignr Chrome Console
+Shift+Ctrl+k$alignr Firefox Console
+Shift+Ctrl+i$alignr Firefox Console
+#${hr}
+
+N O T E S 
+${hr}
+i3
+cheat / eg
+minicom / dmesg
+r2 = radare2
+sysv-rc-conf
+!?cmd 
+sudo rm -f /var/lib/apt/lists/lock 
+
+#${hr}
+
+#alternatif
+#TEXT
+#${voffset 80}${offset 30}CPU 2
+#${voffset 35}${offset 30}CPU 1
+#${voffset 90}${offset 30}RAM
+#${voffset 80}${offset 30}Batt
+#${voffset 80}${offset 30}Root
+#${voffset 85}${offset 28}Home
+#${voffset 85}${offset 35}Air
+#${voffset 80}${offset 30}Wind${if_mounted /media/WIND}
+#${font Aller:size=9}${offset 35}${fs_used_perc /media/WIND}%${else}
+#${offset 40}ø${endif}$font
+#${voffset 65}${offset 30}Fire${if_mounted /media/Fire}
+#${font Aller:size=9}${offset 30}${fs_used_perc /media/Fire}%${else}
+#${offset 35}ø${endif}$font
+
+
