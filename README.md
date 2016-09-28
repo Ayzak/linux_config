@@ -1,10 +1,10 @@
 # linux_config
 My linux app configuration.
 
-+ I've edit .conkyrc with Crunchbang basic configuration (now bunsen labs disctribution).
++ I've edit .conkyrc with Crunchbang basic configuration (now bunsen labs distribution).
   ![conky](http://zupimages.net/up/16/39/gjmd.png)
 
-+ I've edit terminator configuration of crunchbang too.
++ I've edit basic terminator configuration of crunchbang distribution (now bunsen labs).
   ![Terminator](http://zupimages.net/up/16/39/9c22.png)
 
 + I add some entries for cheat.
