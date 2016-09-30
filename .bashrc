@@ -84,9 +84,6 @@ alias mv='mv -vi'
 #sudo vim
 alias svi='sudo vim'
 
-#go home
-alias ~='cd /home/jeremy'
-
 alias back='cd $OLDPWD'
 alias root='sudo su'
 alias runlevel='sudo /sbin/init'
@@ -440,10 +437,8 @@ majgo(){
 	sudo ./all.bash
 }
 
-# cours assembleur
-export PATH=$PATH:/home/jeremy/Dropbox/Public/L3/ArchitectureSystem/gnuarm-3.3.3/bin
 #arduino 
-export PATH=$PATH:/home/jeremy/bin/arduino-1.6.6/
+export PATH=$PATH:~/bin/arduino-1.6.6/
 #racourci pour minivim ctrl+s
 stty -ixon
 
