@@ -1,0 +1,16 @@
+##Speedtest-CLI is a command line interface network speed test.
+
+#Help with speedtest-cli.
+speedtest-cli --help
+
+#Classic start for the command in command line interface..
+speedtest-cli
+
+#Start Speedtest with graphic (URL) résult.
+speedtest-cli --share
+
+#Check à --list of world servers and select some one (| grep "Taiwan").
+speedtest-cli --list | grep "Taiwan"
+
+#Same as grep but more specific.
+speedtest-cli --server 4948
