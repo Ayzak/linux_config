@@ -1,0 +1,115 @@
+###Emerge CheatSheet :
+
+##Gérer les logiciels
+#Installer un logiciel depuis les dépôts
+#gentoo
+emerge -avq pkg
+
+#Debian
+apt-get install pkg
+
+#Installer un logiciel depuis un paquet local
+#gentoo
+NONE
+#Debian
+dpkg -i pkg.deb
+
+#Mettre à jour un logiciel
+#gentoo
+emerge -uD pkg
+#Debian
+apt-get install pkg
+
+#Supprimer un logiciel
+#gentoo
+emerge -aC pkg
+#Debian
+apt-get remove pkg
+
+#Supprimer un paquet et ses dépendances
+#gentoo
+emerge -aC pkg
+puis mise à jour
+emerge -avuDN --with-bdeps=y @world
+puis
+emerge -ac
+#Debian
+apt-get autoremove pkg
+
+#Supprimer les orphelins du système
+#gentoo
+emerge -ac 
+#Debian
+apt-get autoremove
+
+##Mettre à jours le système
+#Mettre à jour les dépôts
+#gentoo
+emerge –sync || eix-sync
+#Debian
+apt-get update
+
+#Mettre à jour les logiciels
+#gentoo
+emerge -avuDN --with-bdeps=y @world
+||
+cl-update (Calculate Linux)
+yes | cl-update -o
+#Debian
+apt-get upgrade (sans nouvelles deps)
+||
+apt-get dist-upgrade (avec nouvelles deps)
+
+##Chercher des paquets
+#Chercher des paquets par leur nom
+#gentoo
+emerge --search pkg || eix pkg
+#Debian
+apt-get search pkg
+
+#Chercher des paquets par une partie de leur nom
+#gentoo
+emerge --search partie
+||
+eix partie
+#Debian
+apt-cache search partie
+
+#Chercher un paquet par un nom de fichier
+#gentoo
+equery b fichier
+#Debian
+apt-file search fichier
+
+#Lister les paquets installés
+#gentoo
+qlist -I
+#Debian
+dpkg -l
+
+##Configurer les dépôts
+#Lister tous les dépôts
+#gentoo
+layman -L
+#Debian
+cat /etc/apt/sources.list
+
+#Lister les dépôts actifs
+#gentoo
+layman -l
+#Debian
+cat /etc/apt/sources.list
+
+#Ajouter un dépôt
+#gentoo
+layman -a repo
+#Debian
+(Editer /etc/apt/sources.list)
+
+#Supprimer un dépôt
+#gentoo
+layman -d repo
+#Debian
+(Editer /etc/apt/sources.list)
+
+
